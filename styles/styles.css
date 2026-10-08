@@ -1,1 +1,225 @@
 @import url("../week01/styles/styles.css");
+
+:root {
+    --page-bg: #dfdfdb;
+    --ink: #111111;
+    --muted: #2f2f2f;
+    --accent: #1d5f6c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--ink);
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.page-shell {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem 1.4rem 2rem;
+}
+
+.page-content {
+    width: min(1180px, 100%);
+}
+
+.site-header {
+    padding: 0.2rem 0 0.6rem;
+}
+
+nav {
+    background-color: transparent;
+    padding: 1rem;
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    align-items: center;
+}
+
+.site-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    color: #1a2de7;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+nav a {
+    color: #1a2de7;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.site-kicker {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.main-card {
+    padding-top: 0.4rem;
+}
+
+main {
+    max-width: 840px;
+}
+
+.page-title {
+    margin: 0 0 1.4rem;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+}
+
+h1 {
+    color: var(--ink);
+}
+
+.separator {
+    font-weight: 700;
+}
+
+.course-title {
+    font-weight: 800;
+}
+
+.profile-row {
+    display: grid;
+    grid-template-columns: 1fr 1.55fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-image {
+    width: 150px;
+    height: auto;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.bio-copy {
+    padding-top: 0.2rem;
+}
+
+.bio-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.25rem, 1.7vw, 2.1rem);
+    line-height: 1.52;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.site-footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+    color: var(--ink);
+    font-size: 1.15rem;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.copyright,
+.name,
+.location {
+    font-weight: 500;
+}
+
+.leaf {
+    font-size: 0.9rem;
+    color: #3a7b52;
+    transform: translateY(-1px);
+}
+
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 0.25rem;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+}
+
+p {
+    padding: 0;
+}
+
+@media (max-width: 760px) {
+    .page-shell {
+        padding: 1rem 1rem 2rem;
+    }
+
+    .site-kicker {
+        font-size: 1rem;
+    }
+
+    .profile-row {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+    }
+
+    .bio-copy p {
+        font-size: 1.1rem;
+    }
+
+    .site-footer {
+        font-size: 1rem;
+    }
+
+    aside {
+        width: auto;
+    }
+}
