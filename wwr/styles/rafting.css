@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #1b3766;
+    --secondary-color: #d98b22;
+    --text-color: #17202a;
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    font-family: var(--body-font);
+}
+
+header,
+main,
+footer {
+    width: min(calc(100% - 2rem), 840px);
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+header > img {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+header nav {
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+}
+
+nav,
+p,
+section,
+article {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--primary-color);
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.history,
+.adventures {
+    margin: 1.25rem 0;
+    padding: 0;
+}
+
+.history h2,
+.adventures h2 {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: var(--body-font);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.history p {
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.adventures {
+    margin-bottom: 1.5rem;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.adventure-gallery figure {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(27 55 102 / 18%);
+    border-radius: 0.35rem;
+    background: #f5f7fa;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 12%);
+}
+
+.adventure-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.adventure-gallery figcaption {
+    padding: 0.65rem 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+footer {
+    border-top: 1px solid #d4d4d4;
+    padding: 0.75rem;
+}
+
+footer .copyright {
+    margin: 0.25rem 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+footer .socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+footer .socialmedia a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .socialmedia img {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.social-x {
+    width: 2rem;
+    height: 2rem;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(27 55 102 / 82%);
+    color: #fff;
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+.hero article {
+    position: absolute;
+    top: 24%;
+    left: 2%;
+    right: 2%;
+    overflow: auto;
+    background-color: rgb(233 196 106 / 95%);
+    padding: 0.75rem;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin: 0 0 0.5rem 0.75rem;
+    border: 3px solid #fff;
+}
+
+.hero article p {
+    margin: 0.75rem;
+    padding: 0.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 0;
+    }
+
+    header nav ul {
+        justify-content: center;
+    }
+
+    .hero article {
+        top: 28%;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery img {
+        aspect-ratio: 16 / 9;
+    }
+}
