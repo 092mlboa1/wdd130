@@ -71,6 +71,17 @@ nav {
     font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
+nav a {
+    color: #1a2de7;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
 .site-kicker {
     margin: 0;
     font-size: 1.1rem;
