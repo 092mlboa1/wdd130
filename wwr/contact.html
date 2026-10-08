@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Nile Resort Rafting | Get in Touch</title>
+    <title>Contact Us | Nile Resort Rafting</title>
     <meta name="description"
       content="Contact Nile Resort Rafting with questions about River Nile trips, reservations, or our services." />
     <meta name="author" content="Musimbi Joel" />
@@ -55,13 +55,20 @@
             <h2>Meet Our Team</h2>
             <div class="team-gallery">
                 <figure>
-                    <figcaption> <strong>Pius Mukisa</strong><br /> Employee </figcaption>
+                    <img src="images/pius.webp"
+                      alt="Illustrated profile avatar placeholder for Pius Mukisa, rafting guide" />
+                    <figcaption><strong>Pius Mukisa</strong><br />Rafting Guide</figcaption>
                 </figure>
                 <figure>
-                    <figcaption> <strong>Pande Lazaro</strong><br /> Manager </figcaption>
+                    <img src="images/pande.webp"
+                      alt="Illustrated profile avatar placeholder for Pande Lazaro, manager" />
+                    <figcaption><strong>Pande Lazaro</strong><br />Manager</figcaption>
                 </figure>
                 <figure>
-                    <figcaption> <strong>Bukenya Lawrence</strong><br /> Coordinator </figcaption>
+                    <img src="images/bukenya.webp"
+                      alt="Illustrated profile avatar placeholder for Bukenya Lawrence, safety coordinator" />
+                    <figcaption><strong>Bukenya Lawrence</strong><br />Safety Coordinator
+                    </figcaption>
                 </figure>
             </div>
         </section>
@@ -78,21 +85,31 @@
                 <fieldset>
                     <legend>What is your message about?</legend>
                     <label>
-                        <input type="radio" name="purpose" value="general-inquiry" required />
+                        <input id="purpose-general" type="radio" name="purpose"
+                          value="general-inquiry" required />
                         General Inquiry
                     </label>
-                    <!-- Add radio choices for Reservation Question and Website Suggestion. -->
+                    <label for="purpose-reservation">
+                        <input id="purpose-reservation" type="radio" name="purpose"
+                          value="reservation-question" />
+                        Reservation Question
+                    </label>
+                    <label for="purpose-website">
+                        <input id="purpose-website" type="radio" name="purpose"
+                          value="website-suggestion" />
+                        Website Suggestion
+                    </label>
                 </fieldset>
 
                 <label for="visitor-message">Message</label>
                 <textarea id="visitor-message" name="message" rows="6" required></textarea>
 
-                <label class="newsletter-option">
-                    <input type="checkbox" name="newsletter" />
+                <label class="newsletter-option" for="newsletter">
+                    <input id="newsletter" type="checkbox" name="newsletter" />
                     Please subscribe me to the monthly newsletter
                 </label>
 
-                <button type="submit">Send Message</button>
+                <button id="send-message" name="submit" type="submit">Send Message</button>
             </form>
         </section>
     </main>
